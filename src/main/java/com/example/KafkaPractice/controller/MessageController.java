@@ -22,7 +22,7 @@ public class MessageController {
     //POST http://localhost:8081/api/v1/messages/publish
     @PostMapping("/publish")
     public void publish(@RequestBody MessageRequest request){
-        kafkaTemplate.send("auction",request.getMessage());
+        kafkaTemplate.send("logSubmission",request.getMessage());
     }
 
 }
