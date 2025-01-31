@@ -8,9 +8,8 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
     @Bean
-    public NewTopic logSubbmitionTopic(){
-        return TopicBuilder
-                .name("logSubmission")
+    public NewTopic newTopic(){
+        return TopicBuilder.name("logSubmission")
                 .build();
     }
 }
