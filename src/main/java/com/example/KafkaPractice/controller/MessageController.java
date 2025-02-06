@@ -1,6 +1,6 @@
 package com.example.KafkaPractice.controller;
 
-import com.example.KafkaPractice.requests.MessageRequest;
+import com.example.KafkaPractice.requests.MsgRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +21,7 @@ public class MessageController {
 
     //POST http://localhost:8081/api/v1/messages/publish
     @PostMapping("/publish")
-    public void publish(@RequestBody MessageRequest request){
+    public void publish(@RequestBody MsgRequest request){
         kafkaTemplate.send("logSubmission",request.getMessage());
     }
 
