@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/messages")
 public class MessageController {
 
-
+    @Autowired
     private KafkaTemplate<String,String> kafkaTemplate;
     @Autowired
     public MessageController(KafkaTemplate<String, String> kafkaTemplate) {

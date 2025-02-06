@@ -1,15 +1,13 @@
 package com.example.KafkaPractice.requests;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Builder
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class MessageRequest {
-    String message;
+    public String message;
 
 }
